@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <!-- Define the console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the root level to ERROR -->
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Example of setting specific package logging levels -->
+    <logger name="org.openqa.selenium" level="ERROR" />
+    <logger name="org.testng" level="ERROR" />
+    <logger name="org.apache.http" level="ERROR" />
+    <logger name="ch.qos.logback" level="ERROR" />
+
+    <!-- Optionally, set logging levels for other packages -->
+    <!-- <logger name="com.yourcompany" level="ERROR" /> -->
+
+</configuration>
