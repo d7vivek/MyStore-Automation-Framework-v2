@@ -2,144 +2,296 @@
 <testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-05T19:34:14 IST" name="Suite" finished-at="2024-09-05T19:34:53 IST" duration-ms="38734">
+  <suite started-at="2024-10-18T15:03:14 IST" name="Suite" finished-at="2024-10-18T15:04:02 IST" duration-ms="47838">
     <groups>
     </groups>
-    <test started-at="2024-09-05T19:34:14 IST" name="Test" finished-at="2024-09-05T19:34:53 IST" duration-ms="38734">
+    <test started-at="2024-10-18T15:03:14 IST" name="Test" finished-at="2024-10-18T15:04:02 IST" duration-ms="47838">
       <class name="tests.Login">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:14 IST" name="setup" finished-at="2024-09-05T19:34:17 IST" duration-ms="3447" status="PASS">
+        <test-method is-config="true" signature="setupExtentReport()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:14 IST" name="setupExtentReport" finished-at="2024-10-18T15:03:14 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupExtentReport -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:14 IST" name="setup" finished-at="2024-10-18T15:03:20 IST" duration-ms="5853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithValidCredentials()[pri:1, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:17 IST" name="loginWithValidCredentials" finished-at="2024-09-05T19:34:18 IST" duration-ms="821" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:20 IST" name="loginWithValidCredentials" finished-at="2024-10-18T15:03:21 IST" duration-ms="741" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:18 IST" name="tearDown" finished-at="2024-09-05T19:34:19 IST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:21 IST" name="tearDown" finished-at="2024-10-18T15:03:21 IST" duration-ms="139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=Login.loginWithValidCredentials()[pri:1, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:19 IST" name="setup" finished-at="2024-09-05T19:34:21 IST" duration-ms="2619" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:21 IST" name="getResult" finished-at="2024-10-18T15:03:21 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=Login.loginWithValidCredentials()[pri:1, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:21 IST" name="setup" finished-at="2024-10-18T15:03:24 IST" duration-ms="3106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithInvalidUsername()[pri:2, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:21 IST" name="loginWithInvalidUsername" finished-at="2024-09-05T19:34:22 IST" duration-ms="790" status="PASS">
+        <test-method signature="loginWithInvalidUsername()[pri:2, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:24 IST" name="loginWithInvalidUsername" finished-at="2024-10-18T15:03:25 IST" duration-ms="616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:22 IST" name="tearDown" finished-at="2024-09-05T19:34:22 IST" duration-ms="166" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:25 IST" name="tearDown" finished-at="2024-10-18T15:03:25 IST" duration-ms="114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidUsername status=SUCCESS method=Login.loginWithInvalidUsername()[pri:2, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:22 IST" name="setup" finished-at="2024-09-05T19:34:26 IST" duration-ms="4303" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:25 IST" name="getResult" finished-at="2024-10-18T15:03:25 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidUsername status=SUCCESS method=Login.loginWithInvalidUsername()[pri:2, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:25 IST" name="setup" finished-at="2024-10-18T15:03:29 IST" duration-ms="4446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithInvalidPassword()[pri:3, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:26 IST" name="loginWithInvalidPassword" finished-at="2024-09-05T19:34:27 IST" duration-ms="690" status="PASS">
+        <test-method signature="loginWithInvalidPassword()[pri:3, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:29 IST" name="loginWithInvalidPassword" finished-at="2024-10-18T15:03:30 IST" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:27 IST" name="tearDown" finished-at="2024-09-05T19:34:27 IST" duration-ms="171" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:30 IST" name="tearDown" finished-at="2024-10-18T15:03:30 IST" duration-ms="154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidPassword status=SUCCESS method=Login.loginWithInvalidPassword()[pri:3, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:27 IST" name="setup" finished-at="2024-09-05T19:34:30 IST" duration-ms="2566" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:30 IST" name="setup" finished-at="2024-10-18T15:03:34 IST" duration-ms="4148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithInvalidUsernamePassword()[pri:4, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:30 IST" name="loginWithInvalidUsernamePassword" finished-at="2024-09-05T19:34:30 IST" duration-ms="563" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:30 IST" name="getResult" finished-at="2024-10-18T15:03:30 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidPassword status=SUCCESS method=Login.loginWithInvalidPassword()[pri:3, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="loginWithInvalidUsernamePassword()[pri:4, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:34 IST" name="loginWithInvalidUsernamePassword" finished-at="2024-10-18T15:03:35 IST" duration-ms="606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidUsernamePassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:30 IST" name="tearDown" finished-at="2024-09-05T19:34:31 IST" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:35 IST" name="tearDown" finished-at="2024-10-18T15:03:35 IST" duration-ms="143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidUsernamePassword status=SUCCESS method=Login.loginWithInvalidUsernamePassword()[pri:4, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:31 IST" name="setup" finished-at="2024-09-05T19:34:33 IST" duration-ms="2640" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:35 IST" name="setup" finished-at="2024-10-18T15:03:39 IST" duration-ms="3502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithBlankUsernamePassword()[pri:5, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:33 IST" name="loginWithBlankUsernamePassword" finished-at="2024-09-05T19:34:34 IST" duration-ms="471" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:35 IST" name="getResult" finished-at="2024-10-18T15:03:35 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidUsernamePassword status=SUCCESS method=Login.loginWithInvalidUsernamePassword()[pri:4, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="loginWithBlankUsernamePassword()[pri:5, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:39 IST" name="loginWithBlankUsernamePassword" finished-at="2024-10-18T15:03:39 IST" duration-ms="496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithBlankUsernamePassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@7dc19a70]" started-at="2024-09-05T19:34:34 IST" name="tearDown" finished-at="2024-09-05T19:34:34 IST" duration-ms="154" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:39 IST" name="tearDown" finished-at="2024-10-18T15:03:39 IST" duration-ms="118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithBlankUsernamePassword status=SUCCESS method=Login.loginWithBlankUsernamePassword()[pri:5, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:03:39 IST" name="getResult" finished-at="2024-10-18T15:03:39 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithBlankUsernamePassword status=SUCCESS method=Login.loginWithBlankUsernamePassword()[pri:5, instance:tests.Login@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Login@3eb738bb]" started-at="2024-10-18T15:04:02 IST" name="tearDown" finished-at="2024-10-18T15:04:02 IST" duration-ms="298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.Login -->
       <class name="tests.Search">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:45 IST" name="setup" finished-at="2024-09-05T19:34:48 IST" duration-ms="2285" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:39 IST" name="setup" finished-at="2024-10-18T15:03:42 IST" duration-ms="2488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchForValidProduct()[pri:1, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:48 IST" name="searchForValidProduct" finished-at="2024-09-05T19:34:48 IST" duration-ms="444" status="PASS">
+        <test-method signature="searchForValidProduct()[pri:1, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:42 IST" name="searchForValidProduct" finished-at="2024-10-18T15:03:42 IST" duration-ms="438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForValidProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:48 IST" name="tearDown" finished-at="2024-09-05T19:34:48 IST" duration-ms="180" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:42 IST" name="tearDown" finished-at="2024-10-18T15:03:42 IST" duration-ms="121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchForValidProduct status=SUCCESS method=Search.searchForValidProduct()[pri:1, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:48 IST" name="setup" finished-at="2024-09-05T19:34:50 IST" duration-ms="1753" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:42 IST" name="getResult" finished-at="2024-10-18T15:03:42 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchForValidProduct status=SUCCESS method=Search.searchForValidProduct()[pri:1, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:42 IST" name="setup" finished-at="2024-10-18T15:03:45 IST" duration-ms="2696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchWithInvalidProduct()[pri:2, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:50 IST" name="searchWithInvalidProduct" finished-at="2024-09-05T19:34:50 IST" duration-ms="385" status="PASS">
+        <test-method signature="searchWithInvalidProduct()[pri:2, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:45 IST" name="searchWithInvalidProduct" finished-at="2024-10-18T15:03:45 IST" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchWithInvalidProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:50 IST" name="tearDown" finished-at="2024-09-05T19:34:50 IST" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:45 IST" name="tearDown" finished-at="2024-10-18T15:03:45 IST" duration-ms="141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchWithInvalidProduct status=SUCCESS method=Search.searchWithInvalidProduct()[pri:2, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:50 IST" name="setup" finished-at="2024-09-05T19:34:52 IST" duration-ms="1813" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:45 IST" name="getResult" finished-at="2024-10-18T15:03:45 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchWithInvalidProduct status=SUCCESS method=Search.searchWithInvalidProduct()[pri:2, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:45 IST" name="setup" finished-at="2024-10-18T15:03:48 IST" duration-ms="2816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchWithNoProduct()[pri:3, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:52 IST" name="searchWithNoProduct" finished-at="2024-09-05T19:34:53 IST" duration-ms="271" status="PASS">
+        <test-method signature="searchWithNoProduct()[pri:3, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:48 IST" name="searchWithNoProduct" finished-at="2024-10-18T15:03:49 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchWithNoProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Search@3e2055d6]" started-at="2024-09-05T19:34:53 IST" name="tearDown" finished-at="2024-09-05T19:34:53 IST" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:49 IST" name="tearDown" finished-at="2024-10-18T15:03:49 IST" duration-ms="143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchWithNoProduct status=SUCCESS method=Search.searchWithNoProduct()[pri:3, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Search@fbd1f6]" started-at="2024-10-18T15:03:49 IST" name="getResult" finished-at="2024-10-18T15:03:49 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchWithNoProduct status=SUCCESS method=Search.searchWithNoProduct()[pri:3, instance:tests.Search@fbd1f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
       </class> <!-- tests.Search -->
       <class name="tests.Register">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:34 IST" name="setup" finished-at="2024-09-05T19:34:36 IST" duration-ms="2389" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:49 IST" name="setup" finished-at="2024-10-18T15:03:52 IST" duration-ms="3720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registerWithAllfield()[pri:1, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:36 IST" name="registerWithAllfield" finished-at="2024-09-05T19:34:38 IST" duration-ms="1295" status="PASS">
+        <test-method signature="registerWithAllfield()[pri:1, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:52 IST" name="registerWithAllfield" finished-at="2024-10-18T15:03:54 IST" duration-ms="1152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithAllfield -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:38 IST" name="tearDown" finished-at="2024-09-05T19:34:38 IST" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:54 IST" name="tearDown" finished-at="2024-10-18T15:03:54 IST" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:38 IST" name="setup" finished-at="2024-09-05T19:34:40 IST" duration-ms="2559" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:54 IST" name="setup" finished-at="2024-10-18T15:03:57 IST" duration-ms="3778" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registerWithMandatoryField()[pri:2, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:40 IST" name="registerWithMandatoryField" finished-at="2024-09-05T19:34:42 IST" duration-ms="1283" status="PASS">
+        <test-method signature="registerWithMandatoryField()[pri:2, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:57 IST" name="registerWithMandatoryField" finished-at="2024-10-18T15:03:59 IST" duration-ms="1101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithMandatoryField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:42 IST" name="tearDown" finished-at="2024-09-05T19:34:42 IST" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:59 IST" name="tearDown" finished-at="2024-10-18T15:03:59 IST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:42 IST" name="setup" finished-at="2024-09-05T19:34:45 IST" duration-ms="2758" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:03:59 IST" name="setup" finished-at="2024-10-18T15:04:02 IST" duration-ms="2812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registerWithoutEnteringAnyDetails()[pri:3, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:45 IST" name="registerWithoutEnteringAnyDetails" finished-at="2024-09-05T19:34:45 IST" duration-ms="581" status="PASS">
+        <test-method signature="registerWithoutEnteringAnyDetails()[pri:3, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:04:02 IST" name="registerWithoutEnteringAnyDetails" finished-at="2024-10-18T15:04:02 IST" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithoutEnteringAnyDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@18f8cd79]" started-at="2024-09-05T19:34:45 IST" name="tearDown" finished-at="2024-09-05T19:34:45 IST" duration-ms="169" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Register@1ce24091]" started-at="2024-10-18T15:04:02 IST" name="tearDown" finished-at="2024-10-18T15:04:02 IST" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

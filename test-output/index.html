@@ -171,64 +171,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.Register</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="registerWithAllfield">
-                  </a> <!-- registerWithAllfield -->
-                  <span class="method-name">registerWithAllfield</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="registerWithMandatoryField">
-                  </a> <!-- registerWithMandatoryField -->
-                  <span class="method-name">registerWithMandatoryField</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="registerWithoutEnteringAnyDetails">
-                  </a> <!-- registerWithoutEnteringAnyDetails -->
-                  <span class="method-name">registerWithoutEnteringAnyDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Search</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchForValidProduct">
-                  </a> <!-- searchForValidProduct -->
-                  <span class="method-name">searchForValidProduct</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchWithInvalidProduct">
-                  </a> <!-- searchWithInvalidProduct -->
-                  <span class="method-name">searchWithInvalidProduct</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchWithNoProduct">
-                  </a> <!-- searchWithNoProduct -->
-                  <span class="method-name">searchWithNoProduct</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tests.Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -269,6 +211,64 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.Search</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchForValidProduct">
+                  </a> <!-- searchForValidProduct -->
+                  <span class="method-name">searchForValidProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchWithInvalidProduct">
+                  </a> <!-- searchWithInvalidProduct -->
+                  <span class="method-name">searchWithInvalidProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchWithNoProduct">
+                  </a> <!-- searchWithNoProduct -->
+                  <span class="method-name">searchWithNoProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.Register</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithAllfield">
+                  </a> <!-- registerWithAllfield -->
+                  <span class="method-name">registerWithAllfield</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithMandatoryField">
+                  </a> <!-- registerWithMandatoryField -->
+                  <span class="method-name">registerWithMandatoryField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithoutEnteringAnyDetails">
+                  </a> <!-- registerWithoutEnteringAnyDetails -->
+                  <span class="method-name">registerWithoutEnteringAnyDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -279,11 +279,14 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listneners.ListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.Login&quot;/&gt;
-      &lt;class name=&quot;tests.Register&quot;/&gt;
       &lt;class name=&quot;tests.Search&quot;/&gt;
+      &lt;class name=&quot;tests.Register&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -327,52 +330,52 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registerWithAllfield')
 data.setCell(0, 2, 'tests.Register')
-data.setCell(0, 3, 1295);
+data.setCell(0, 3, 1152);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'registerWithMandatoryField')
 data.setCell(1, 2, 'tests.Register')
-data.setCell(1, 3, 1283);
+data.setCell(1, 3, 1101);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginWithValidCredentials')
 data.setCell(2, 2, 'tests.Login')
-data.setCell(2, 3, 821);
+data.setCell(2, 3, 741);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginWithInvalidUsername')
+data.setCell(3, 1, 'loginWithInvalidPassword')
 data.setCell(3, 2, 'tests.Login')
-data.setCell(3, 3, 790);
+data.setCell(3, 3, 650);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginWithInvalidPassword')
+data.setCell(4, 1, 'loginWithInvalidUsername')
 data.setCell(4, 2, 'tests.Login')
-data.setCell(4, 3, 690);
+data.setCell(4, 3, 616);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'registerWithoutEnteringAnyDetails')
-data.setCell(5, 2, 'tests.Register')
-data.setCell(5, 3, 581);
+data.setCell(5, 1, 'loginWithInvalidUsernamePassword')
+data.setCell(5, 2, 'tests.Login')
+data.setCell(5, 3, 606);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'loginWithInvalidUsernamePassword')
+data.setCell(6, 1, 'loginWithBlankUsernamePassword')
 data.setCell(6, 2, 'tests.Login')
-data.setCell(6, 3, 563);
+data.setCell(6, 3, 496);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'loginWithBlankUsernamePassword')
-data.setCell(7, 2, 'tests.Login')
-data.setCell(7, 3, 471);
+data.setCell(7, 1, 'registerWithoutEnteringAnyDetails')
+data.setCell(7, 2, 'tests.Register')
+data.setCell(7, 3, 494);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'searchForValidProduct')
 data.setCell(8, 2, 'tests.Search')
-data.setCell(8, 3, 444);
+data.setCell(8, 3, 438);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'searchWithInvalidProduct')
 data.setCell(9, 2, 'tests.Search')
-data.setCell(9, 3, 385);
+data.setCell(9, 3, 369);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'searchWithNoProduct')
 data.setCell(10, 2, 'tests.Search')
-data.setCell(10, 3, 271);
+data.setCell(10, 3, 282);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -387,9 +390,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.Search</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupExtentReport</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -399,144 +411,187 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.Login</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupExtentReport</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">271 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithValidCredentials</span>
-                <span class="method-start">3448 ms</span>
+                <span class="method-start">6124 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">4271 ms</span>
+                <span class="method-name">tearDown([TestResult name=loginWithValidCredentials status=SUCCESS method=Login.loginWithValidCredentials()[p...)</span>
+                <span class="method-start">6868 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=loginWithValidCredentials status=SUCCESS method=Login.loginWithValidCredentials()[p...)</span>
+                <span class="method-start">7007 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">4494 ms</span>
+                <span class="method-start">7011 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidUsername</span>
-                <span class="method-start">7113 ms</span>
+                <span class="method-start">10117 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">7904 ms</span>
+                <span class="method-name">tearDown([TestResult name=loginWithInvalidUsername status=SUCCESS method=Login.loginWithInvalidUsername()[pri...)</span>
+                <span class="method-start">10735 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=loginWithInvalidUsername status=SUCCESS method=Login.loginWithInvalidUsername()[pri...)</span>
+                <span class="method-start">10849 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">8071 ms</span>
+                <span class="method-start">10852 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidPassword</span>
-                <span class="method-start">12374 ms</span>
+                <span class="method-start">15298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">13066 ms</span>
+                <span class="method-name">tearDown([TestResult name=loginWithInvalidPassword status=SUCCESS method=Login.loginWithInvalidPassword()[pri...)</span>
+                <span class="method-start">15950 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">13239 ms</span>
+                <span class="method-start">16104 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=loginWithInvalidPassword status=SUCCESS method=Login.loginWithInvalidPassword()[pri...)</span>
+                <span class="method-start">16104 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidUsernamePassword</span>
-                <span class="method-start">15805 ms</span>
+                <span class="method-start">20252 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">16369 ms</span>
+                <span class="method-name">tearDown([TestResult name=loginWithInvalidUsernamePassword status=SUCCESS method=Login.loginWithInvalidUserna...)</span>
+                <span class="method-start">20858 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">16561 ms</span>
+                <span class="method-start">21002 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=loginWithInvalidUsernamePassword status=SUCCESS method=Login.loginWithInvalidUserna...)</span>
+                <span class="method-start">21002 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">loginWithBlankUsernamePassword</span>
-                <span class="method-start">19201 ms</span>
+                <span class="method-start">24504 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">19672 ms</span>
+                <span class="method-name">tearDown([TestResult name=loginWithBlankUsernamePassword status=SUCCESS method=Login.loginWithBlankUsernamePa...)</span>
+                <span class="method-start">25002 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Register</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">19827 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">registerWithAllfield</span>
-                <span class="method-start">22216 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">23512 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">23698 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">registerWithMandatoryField</span>
-                <span class="method-start">26257 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">27541 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">27741 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">registerWithoutEnteringAnyDetails</span>
-                <span class="method-start">30500 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">31081 ms</span>
+                <span class="method-name">getResult([TestResult name=loginWithBlankUsernamePassword status=SUCCESS method=Login.loginWithBlankUsernamePa...)</span>
+                <span class="method-start">25120 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.Search</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">31251 ms</span>
+                <span class="method-start">25122 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchForValidProduct</span>
-                <span class="method-start">33536 ms</span>
+                <span class="method-start">27610 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">33981 ms</span>
+                <span class="method-name">tearDown([TestResult name=searchForValidProduct status=SUCCESS method=Search.searchForValidProduct()[pri:1, i...)</span>
+                <span class="method-start">28049 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=searchForValidProduct status=SUCCESS method=Search.searchForValidProduct()[pri:1, i...)</span>
+                <span class="method-start">28170 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">34162 ms</span>
+                <span class="method-start">28172 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchWithInvalidProduct</span>
-                <span class="method-start">35915 ms</span>
+                <span class="method-start">30868 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">36301 ms</span>
+                <span class="method-name">tearDown([TestResult name=searchWithInvalidProduct status=SUCCESS method=Search.searchWithInvalidProduct()[pr...)</span>
+                <span class="method-start">31238 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=searchWithInvalidProduct status=SUCCESS method=Search.searchWithInvalidProduct()[pr...)</span>
+                <span class="method-start">31380 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">36458 ms</span>
+                <span class="method-start">31381 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchWithNoProduct</span>
-                <span class="method-start">38271 ms</span>
+                <span class="method-start">34197 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=searchWithNoProduct status=SUCCESS method=Search.searchWithNoProduct()[pri:3, insta...)</span>
+                <span class="method-start">34480 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=searchWithNoProduct status=SUCCESS method=Search.searchWithNoProduct()[pri:3, insta...)</span>
+                <span class="method-start">34623 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.Register</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">34624 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerWithAllfield</span>
+                <span class="method-start">38344 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38542 ms</span>
+                <span class="method-start">39499 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">39637 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerWithMandatoryField</span>
+                <span class="method-start">43415 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">44517 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">44645 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerWithoutEnteringAnyDetails</span>
+                <span class="method-start">47457 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47952 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.Login</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">48102 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
