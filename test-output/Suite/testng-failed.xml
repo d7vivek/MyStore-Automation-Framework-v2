@@ -8,14 +8,24 @@
     <classes>
       <class name="tests.Search">
         <methods>
-          <include name="searchWithNoProduct"/>
           <include name="setupRegister"/>
+          <include name="searchWithNoProduct"/>
           <include name="setupExtentReport"/>
           <include name="tearDownCustom"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.Search -->
+      <class name="tests.Login">
+        <methods>
+          <include name="loginWithValidCredentials"/>
+          <include name="setupLogin"/>
+          <include name="setupExtentReport"/>
+          <include name="tearDownCustom"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.Login -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

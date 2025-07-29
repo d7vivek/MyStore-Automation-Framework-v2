@@ -5,14 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.WaitHelper;
+
 public class RegisterPage {
 
 	WebDriver driver;
 
-
 	public RegisterPage(WebDriver driver) {
 
 		this.driver=driver;
+		 new WaitHelper(driver, 15);
 		PageFactory.initElements(driver, this);
 
 	}

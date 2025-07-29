@@ -11,28 +11,33 @@ import com.aventstack.extentreports.Status;
 import Base.BaseTest;
 import Reports.ExtentManager;
 
-public class Login extends BaseTest { // Inherit from BaseTest
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.By;
+import java.time.Duration;
 
+public class Login extends BaseTest {
 
-	private static final String WARNING_MESSAGE = "Warning: No match for E-Mail Address and/or Password.";
+    private static final String WARNING_MESSAGE = "Warning: No match for E-Mail Address and/or Password.";
 
-	@BeforeMethod
-	public void setupLogin() {
-		super.setupBrowserOnly();
+    @BeforeMethod
+    public void setupLogin() {
+        super.setupBrowserOnly();
+        loginPage = homePage.clickOnMyAccount().selectLoginOption();
 
-		loginPage = homePage.clickOnMyAccount().selectLoginOption();
-	}
+        // Wait until the login page email field is visible
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.id("input-email")));
+    }
 
-	@AfterMethod
-	public void tearDownCustom(ITestResult result) {
-		super.tearDown(result);  // call BaseTest's method to ensure driver.quit() works
+    @AfterMethod
+    public void tearDownCustom(ITestResult result) {
+        super.tearDown(result);
+        test.log(Status.INFO, "Login test teardown completed.");
+    }
 
-		// Optional: custom logs
-		test.log(Status.INFO, "Login test teardown completed.");
-	}
-
-	@Test(priority = 1)
-	public void loginWithValidCredentials() {
+    @Test(priority = 1)
+	public void loginWithValidCredentials() {		// keep this method without wait implemented in it 
 
 		test = extent.createTest("loginWithValidCredentials");
 		ExtentManager.setTest(test);
@@ -44,55 +49,69 @@ public class Login extends BaseTest { // Inherit from BaseTest
 		Assert.assertTrue(myAccountPage.LoggedInStatus());
 	}
 
-	@Test(priority = 2)
-	public void loginWithInvalidUsername() {
-
-		test = extent.createTest("loginWithInvalidUsername");
-		ExtentManager.setTest(test);
 
 
-		test = extent.createTest("Login with Invalid Username");
-		loginPage.enterLoginEmailAddress(prop.getProperty("invalidemail"))
-		.enterLoginPassword(prop.getProperty("invalidpassword"))
-		.clickOnLoginButton();
-		String actualWarning = loginPage.retriveWarningMessage();
-		Assert.assertEquals(actualWarning, WARNING_MESSAGE, "There is a problem with the warning message");
-	}
 
-	@Test(priority = 3)
-	public void loginWithInvalidPassword() {
+    @Test(priority = 2)
+    public void loginWithInvalidUsername() {
+        test = extent.createTest("Login with Invalid Username");
+        ExtentManager.setTest(test);
 
-		test = extent.createTest("loginWithInvalidPassword");
-		ExtentManager.setTest(test); 
+        loginPage.enterLoginEmailAddress(prop.getProperty("invalidemail"))
+                .enterLoginPassword(prop.getProperty("invalidpassword"))
+                .clickOnLoginButton();
 
-		loginPage.enterLoginEmailAddress(prop.getProperty("email"))
-		.enterLoginPassword(prop.getProperty("invalidpassword"))
-		.clickOnLoginButton();
-		String actualWarning = loginPage.retriveWarningMessage();
-		Assert.assertEquals(actualWarning, WARNING_MESSAGE, "There is a problem with the warning message");
-	}
+        // Wait for warning message
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert.alert-danger")));
 
-	@Test(priority = 4)
-	public void loginWithInvalidUsernamePassword() {
+        String actualWarning = loginPage.retriveWarningMessage();
+        Assert.assertEquals(actualWarning, WARNING_MESSAGE, "Mismatch in warning message for invalid username.");
+    }
 
+    @Test(priority = 3)
+    public void loginWithInvalidPassword() {
+        test = extent.createTest("Login with Invalid Password");
+        ExtentManager.setTest(test);
 
-		test = extent.createTest("Login with Invalid Username and Password");
-		ExtentManager.setTest(test); 
+        loginPage.enterLoginEmailAddress(prop.getProperty("email"))
+                .enterLoginPassword(prop.getProperty("invalidpassword"))
+                .clickOnLoginButton();
 
-		loginPage.enterLoginEmailAddress(prop.getProperty("invalidemail"))
-		.enterLoginPassword(prop.getProperty("invalidpassword"))
-		.clickOnLoginButton();
-		String actualWarning = loginPage.retriveWarningMessage();
-		Assert.assertEquals(actualWarning, WARNING_MESSAGE, "There is a problem with the warning message");
-	}
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert.alert-danger")));
 
-	@Test(priority = 5)
-	public void loginWithBlankUsernamePassword() {
-		test = extent.createTest("Login with Blank Username and Password");
-		ExtentManager.setTest(test); 
+        String actualWarning = loginPage.retriveWarningMessage();
+        Assert.assertEquals(actualWarning, WARNING_MESSAGE, "Mismatch in warning message for invalid password.");
+    }
 
-		loginPage.clickOnLoginButton();
-		String actualWarning = loginPage.retriveWarningMessage();
-		Assert.assertEquals(actualWarning, WARNING_MESSAGE, "There is a problem with the warning message");
-	}
+    @Test(priority = 4)
+    public void loginWithInvalidUsernamePassword() {
+        test = extent.createTest("Login with Invalid Username and Password");
+        ExtentManager.setTest(test);
+
+        loginPage.enterLoginEmailAddress(prop.getProperty("invalidemail"))
+                .enterLoginPassword(prop.getProperty("invalidpassword"))
+                .clickOnLoginButton();
+
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert.alert-danger")));
+
+        String actualWarning = loginPage.retriveWarningMessage();
+        Assert.assertEquals(actualWarning, WARNING_MESSAGE, "Mismatch in warning message for invalid credentials.");
+    }
+
+    @Test(priority = 5)
+    public void loginWithBlankUsernamePassword() {
+        test = extent.createTest("Login with Blank Username and Password");
+        ExtentManager.setTest(test);
+
+        loginPage.clickOnLoginButton();
+
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert.alert-danger")));
+
+        String actualWarning = loginPage.retriveWarningMessage();
+        Assert.assertEquals(actualWarning, WARNING_MESSAGE, "Mismatch in warning message for blank credentials.");
+    }
 }
