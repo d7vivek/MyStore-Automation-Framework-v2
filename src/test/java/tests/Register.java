@@ -1,77 +1,47 @@
 package tests;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Duration;
 import java.util.Date;
-import java.util.Properties;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.Status;
-import Reports.BaseTest;  // Import BaseTest which includes ExtentReport setup
+
+import Base.BaseTest;
+import Reports.ExtentManager;
 import pageobjects.AccountSuccessPage;
-import pageobjects.HomePage;
 import pageobjects.RegisterPage;
 
 public class Register extends BaseTest {  // Extend from BaseTest to inherit ExtentReports
 
-    WebDriver driver = null;
-    Properties prop = null;
     RegisterPage registerpage = null ;
     AccountSuccessPage accountsuccesspage = null;
-
+    
+        
     @BeforeMethod
-    public void setup() {
-        // Start a new test in the ExtentReport
-        test = extent.createTest("Register Test - Setup");
+    public void setupRegister() {
+        super.setupBrowserOnly();  // initialize browser and homepage
 
-        prop = new Properties();
-        try {
-            prop.load(new FileInputStream(new File("C:\\selenium-workspace\\practice-workspace\\javapractice\\pomPfProject\\src\\test\\java\\properties\\projectData.properties")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String browserName = prop.getProperty("browser");
-
-        if(browserName.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
-        } else if(browserName.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
-        }
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get(prop.getProperty("url"));
-
-        HomePage homepage = new HomePage(driver);
-        homepage.clickOnMyAccount();
-        registerpage = homepage.slectRegisterOption();
-
-        // Log browser setup completion
-        test.log(Status.INFO, "Browser setup and navigation to register page completed.");
+        // Now go to Register Page
+        registerpage = homePage.clickOnMyAccount().slectRegisterOption();
     }
-
+    
     @AfterMethod
-    public void tearDown() {
-        if(driver != null) {
-            driver.quit();
-        }
+    public void tearDownCustom(ITestResult result) {
+        super.tearDown(result);  // call BaseTest's method to ensure driver.quit() works
 
-        // Log teardown steps
-        test.log(Status.INFO, "Browser closed.");
+        // Optional: custom logs
+        test.log(Status.INFO, "Register test teardown completed.");
     }
 
     @Test(priority = 1)
     public void registerWithAllfield() {
         test = extent.createTest("Register with All Fields Test");  // New test in report
-
+        ExtentManager.setTest(test); 
+        
         accountsuccesspage = registerpage.enterFirstNameToRegister(prop.getProperty("firstname"))
                 .enterLastNametoRegister(prop.getProperty("lastname"))
                 .enterEmailToRegister(genrateNewEmail())
@@ -94,7 +64,8 @@ public class Register extends BaseTest {  // Extend from BaseTest to inherit Ext
     @Test(priority = 2)
     public void registerWithMandatoryField() {
         test = extent.createTest("Register with Mandatory Fields Test");
-
+        ExtentManager.setTest(test); 
+        
         accountsuccesspage = registerpage.enterFirstNameToRegister(prop.getProperty("firstname"))
                 .enterLastNametoRegister(prop.getProperty("lastname"))
                 .enterEmailToRegister(genrateNewEmail())
@@ -115,7 +86,8 @@ public class Register extends BaseTest {  // Extend from BaseTest to inherit Ext
     @Test(priority = 3)
     public void registerWithoutEnteringAnyDetails() {
         test = extent.createTest("Register without Entering Any Details Test");
-
+        ExtentManager.setTest(test); 
+        
         registerpage.clickOnSubmitButton();
 
         String expectedError = "First Name must be between 1 and 32 characters!";
